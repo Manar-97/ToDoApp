@@ -3,6 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todoapp/data/hive_data_store.dart';
 import 'package:todoapp/models/task.dart';
 import 'package:todoapp/views/home/home_view.dart';
+import 'package:todoapp/views/splash/splash.dart';
 
 Future<void> main() async {
   ///Init Hive DB before runApp
@@ -97,9 +98,9 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         HomeView.routName: (_) => const HomeView(),
-        //TaskView.routName: (_) => const TaskView(),
+        Splash.routName: (_) => const Splash(),
       },
-      initialRoute: HomeView.routName,
+      initialRoute: Splash.routName,
     );
   }
 }
